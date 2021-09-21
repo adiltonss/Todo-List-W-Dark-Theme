@@ -43,7 +43,8 @@ body{
 }
 
 .header{
-    width: 100%;
+    width: 90%;
+    margin: auto;
     height: 3.30em;
     display: flex;
     align-items: flex-end;
@@ -51,7 +52,6 @@ body{
 }
 
 .header div{
-    margin: 0 20px;
     font-size: 25px;
     font-weight: 800;
     letter-spacing: 10px;
@@ -65,7 +65,10 @@ body{
     border: none;
 }
 
-
+.input-container{
+    width: 90%;
+    margin: 1em auto 0;
+}
 
 .input-todo{
     width: 100%;
@@ -217,6 +220,13 @@ li span{
 
 .deleting{
     animation: deleting .1s linear;
+}
+
+.drag-warning{
+    width: 90%;
+    margin: 3em auto;
+    text-align: center;
+    color: var(--text-color3);
 }
 
 .attribution{

@@ -1,5 +1,10 @@
 import {renderFromLocal, deleteFromLocal, saveOnLocal, updateOnLocal} from "../js/localStorageFunctions.js";
 
+const dragArea = document.querySelector(".ul-todo");
+new Sortable(dragArea, {
+    animation: 100
+});
+
 let noncompledtasks = 0;
 
 function Task(title){
