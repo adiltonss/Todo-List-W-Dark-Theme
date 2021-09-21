@@ -218,13 +218,6 @@ li span{
     background: var(--li-hover-color);
 }
 
-.drag-warning{
-    width: 90%;
-    margin: 30px auto;
-    text-align: center;
-    color: var(--text-color3);
-}
-
 .deleting{
     animation: deleting .1s linear;
 }
