@@ -29,6 +29,7 @@ function changeTheme(){
         document.querySelector('.theme-img').src = 'images/icon-moon.svg';
     }
 };
+
 // ------------- listen to check and delete clicks -------------------
 function getLi(e){
     let currentLi = e.target;
@@ -61,6 +62,7 @@ function getLi(e){
         }
     }
 };
+
 // ------------------ create tasks ---------------------
 function createTodo(e){
     if(e.keyCode === 13){
@@ -87,7 +89,7 @@ function createTodo(e){
 document.querySelector('.filter-bar').addEventListener('click', (e)=>{
     let tasks = document.querySelectorAll('.task');
     tasks.forEach(task =>{
-        switch (e.target.textContent) {
+        switch (e.target.id) {
             case "All":
                 task.style.display = 'grid';       
                 break;
@@ -110,7 +112,8 @@ document.querySelector('.filter-bar').addEventListener('click', (e)=>{
         }
     })    
 });
-//update the field items left at the DOM
+
+//update the field "items left" at the DOM
 export function itemsLeft(value){
     if(noncompledtasks < 0){
         noncompledtasks = 0

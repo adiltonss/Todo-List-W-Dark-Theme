@@ -2,24 +2,24 @@ import { itemsLeft } from "./main.js";
 
 export function renderFromLocal(container){
     let tasks = getTasks();
-    tasks.forEach(task =>{
+    tasks.map(({id, title, completed}) => {
         let li = document.createElement('li');
-            li.classList.add("task"); 
-            li.setAttribute("data-id", `${task.id}`);           
-        if (task.completed === true) {
+        li.classList.add("task"); 
+        li.setAttribute("data-id", `${id}`);           
+        if (completed === true) {
             li.className += ' checked'
             li.innerHTML = `
                 <span class="check"><img src="images/icon-check.svg" alt=""></span>
-                <span class="task-span">${task.title}</span>
+                <span class="task-span">${title}</span>
                 <span class="delete"><img src="images/icon-cross.svg" alt=""></span>`;
-            }else{
+        }else{
             li.innerHTML = `
                 <span class="check"><img src="" alt=""></span>
-                <span class="task-span">${task.title}</span>
+                <span class="task-span">${title}</span>
                 <span class="delete"><img src="images/icon-cross.svg" alt=""></span>`;
-                itemsLeft(true);
+            itemsLeft(true);
             }
-        container.appendChild(li);
+        container.appendChild(li);        
     })
 }
 
